@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\code\vs\trans-track-publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=translogistics.cnov3xgxiwbf.us-west-2.rds.amazonaws.com%3bDatabase=transLogisticsDB%3bUser Id=tl_admin%3bPassword=t1Adm1n1%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <File Include="Data/Migrations/20190626090353_ServiceType.cs">
+      <publishTime>06/26/2019 02:03:54</publishTime>
+    </File>
+    <File Include="Data/Migrations/20190626090353_ServiceType.Designer.cs">
+      <publishTime>06/26/2019 02:03:54</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,80 @@
+﻿@page
+@model trans_track.Pages.Vehicle.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Vehicle</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Vehicle.ID" />
+            <div class="form-group">
+                <label asp-for="Vehicle.Make" class="control-label"></label>
+                <input asp-for="Vehicle.Make" class="form-control" />
+                <span asp-validation-for="Vehicle.Make" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.Model" class="control-label"></label>
+                <input asp-for="Vehicle.Model" class="form-control" />
+                <span asp-validation-for="Vehicle.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.Year" class="control-label"></label>
+                <input asp-for="Vehicle.Year" class="form-control" />
+                <span asp-validation-for="Vehicle.Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.Capacity" class="control-label"></label>
+                <input asp-for="Vehicle.Capacity" class="form-control" />
+                <span asp-validation-for="Vehicle.Capacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.License" class="control-label"></label>
+                <input asp-for="Vehicle.License" class="form-control" />
+                <span asp-validation-for="Vehicle.License" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.VIN" class="control-label"></label>
+                <input asp-for="Vehicle.VIN" class="form-control" />
+                <span asp-validation-for="Vehicle.VIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.DatePurchased" class="control-label"></label>
+                <input asp-for="Vehicle.DatePurchased" class="form-control" />
+                <span asp-validation-for="Vehicle.DatePurchased" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.PricePaid" class="control-label"></label>
+                <input asp-for="Vehicle.PricePaid" class="form-control" />
+                <span asp-validation-for="Vehicle.PricePaid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.PurchasedFrom" class="control-label"></label>
+                <input asp-for="Vehicle.PurchasedFrom" class="form-control" />
+                <span asp-validation-for="Vehicle.PurchasedFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.ImagePath" class="control-label"></label>
+                <img src="@Html.DisplayFor(m => m.Vehicle.ImagePath)" alt="Image"  width="300" height="200"/>
+                <input name="file" type="file" />
+                <span asp-validation-for="Vehicle.ImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
